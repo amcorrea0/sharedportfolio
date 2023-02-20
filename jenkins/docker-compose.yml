@@ -1,0 +1,14 @@
+version: '2.3.91'
+services:
+  jenkins:
+    image: jenkins/jenkins
+    ports:
+      - 8080:8080
+      - 50000:50000
+    container_name: jenkins
+    volume:
+      - $PWD/Documents/jenkins/jenkins_home:/var/jenkins_home
+    networks:
+      - net
+networks:
+  net:
